@@ -10,14 +10,16 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "googleServicesFile": "./config/GoogleService-Info.plist"
+      "googleServicesFile": "./config/GoogleService-Info.plist",
+      "bundleIdentifier": "com.books.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "googleServicesFile": "./config/google-services.json"
+      "googleServicesFile": "./config/google-services.json",
+      "package": "com.books.app"
     },
     "web": {
       "bundler": "metro",
@@ -26,6 +28,12 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent"
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -40,6 +48,19 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "88f6ceb7-e71f-408d-96a5-7afa76a60a4b"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/88f6ceb7-e71f-408d-96a5-7afa76a60a4b"
+    },
+    "owner": "awesomeapps"
   }
 }
